@@ -1,0 +1,40 @@
+* {
+    margin: 0;
+    padding: 0;
+
+}
+
+h1 {
+    text-align: center;
+    color: blue;
+    text-decoration: underline;
+}
+
+form {
+    display: flex;
+    justify-content: center;
+}
+
+table {
+    background-color: aqua;
+    
+    
+ 
+}
+
+th {
+    padding: 10px;
+}
+
+td {
+    padding: 10px;
+}
+
+td input {
+    padding: 7px;
+    border: 1px solid black;
+}
+
+#file {
+    border: none;
+}

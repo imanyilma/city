@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Form</title>
+        <link rel="stylesheet" href="gud.css">
+    </head>
+    <body>
+        <form id="userId">
+            <table>
+                <th colspan="2">
+                    <h1>Fill in the following form</h1>
+                </th>
+                <tr>
+                    <td> 
+                        <label for="fname">
+                            First Name
+                        </label>
+                    </td>
+                    <td>
+                        <input type="text" name="fname" id="fname">
+                    </td>
+                    <td>
+                        <div id="fname_error"></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="sname">
+                            Second Name
+                        </label>
+                    </td>
+                    <td>
+                        <input name="sname" id="sname" type="text">
+                    </td>
+                    <td>
+                        <p id="sname_error"></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="gender">
+                            Gender
+                        </label>
+                        <td>
+                            <label>
+                                <input
+                                    type="radio"
+                                    name="gender"
+                                    id="female"
+                                    value="Male"
+                                >
+                                Male
+                            </label>
+                            <label>
+                                <input
+                                    type="radio"
+                                    name="gender"
+                                    id="male"
+                                    value="Female"
+                                >
+                                Female
+                            </label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="email">
+                                Email Address
+                            </label>
+                        </td>
+                        <td>
+                            <input type="email" name="email" id="email">
+                        </td>
+                        <td>
+                            <p id="email_error"></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="pno">
+                                Phone Number
+                            </label>
+                        </td>
+                        <td>
+                            <input
+                                type="tel"
+                                requiredtype="number"
+                                name="pno"
+                                id="pno"
+                            >
+                        </td>
+                        <td>
+                            <p id="pno_error"></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="birthdateInput">Date of Birth:</label>
+                        </td>
+                        <td>
+                            <input
+                                type="date"
+                                id="bd"
+                                name="bd"
+                                min="1900-01-01"
+                                max="2005-12-31"
+                                required
+                            >
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="ar">
+                                Academic Rank
+                            </label>
+                        </td>
+                        <td>
+                            <input type="number" id="ar" name="ar">
+                        </td>
+                        <td>
+                            <p id="ar_error"></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="pw">
+                                Password
+                            </label>
+                        </td>
+                        <td>
+                            <input type="password" id="pw" name="pw">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="cpw">
+                                Confirm Password
+                            </label>
+                        </td>
+                        <td>
+                            <input type="password" id="cpw" name="cpw">
+                        </td>
+                        <td>
+                            <p id="pw_error"></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="pw">
+                                Upload Photo
+                            </label>
+                        </td>
+                        <td>
+                            <input type="file" id="file" name="file">
+                        </td>
+                    </tr>
+                </form>
+                <script src="index.js"></script>
+            </body>
+        </html>

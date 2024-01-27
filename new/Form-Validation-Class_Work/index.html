@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Temperature Converter</title>
+</head>
+<body>
+    <h1>Temperature Converter</h1>
+    <label for="temp">Enter temperature:</label>
+    <input type="text" id="temp" oninput="convert()">
+    <br>
+    <label for="result">Converted temperature:</label>
+    <input type="text" id="result" readonly>
+    <br>
+    <input type="radio" id="celsiusToFahrenheit" name="conversion" value="celsiusToFahrenheit" checked>
+    <label for="celsiusToFahrenheit">Celsius to Fahrenheit</label>
+    <br>
+    <input type="radio" id="fahrenheitToCelsius" name="conversion" value="fahrenheitToCelsius">
+    <label for="fahrenheitToCelsius">Fahrenheit to Celsius</label>
+    <script>
+        function convert() {
+            const tempInput = document.getElementById("temp").value;
+            const conversionType = document.querySelector('input[name="conversion"]:checked').value;
+            let convertedTemp;
+
+            if (conversionType === "celsiusToFahrenheit") {
+                convertedTemp = (tempInput * 9 / 5) + 32;
+            } else {
+                convertedTemp = (tempInput - 32) * 5 / 9;
+            }
+
+            document.getElementById("result").value = convertedTemp.toFixed(2); // Display 2 decimal places
+        }
+    </script>
+</body>
+</html>

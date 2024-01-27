@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Validation</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <form action="" onsubmit="return validateForm()">
+      <label for="">First name: </label>
+      <input
+        type="text"
+        name="fname"
+        id="fname"
+        onkeyup="firstName()"
+        placeholder="Enter first name"
+      />
+      <p id="firstName_err"></p>
+      <br />
+
+      <label for="">Last name: </label>
+      <input type="text" name="lname" id="lname" onkeyup="lastName()" />
+      <p id="lastName_err"></p>
+      <br />
+
+      <label for="">Gender: </label>
+      <label for="male">Male</label>
+      <input type="radio" name="gender" id="male" value="male" />
+      <label for="female">Female</label>
+      <input type="radio" name="gender" id="female" value="female" />
+      <p id="gender_err"></p>
+      <br />
+
+      <label for="">Email: </label>
+      <input type="email" name="email" id="email" onkeyup="validateEmail()" />
+      <p id="email_err"></p>
+      <br />
+
+      <label for="">Phone number: </label>
+      <input
+        type="text"
+        name="phone"
+        id="phone"
+        onkeyup="validatePhoneNumber()"
+      />
+      <p id="phone_err"></p>
+      <br />
+
+      <label for="">Birthdate: </label>
+      <input
+        type="date"
+        name="birthdate"
+        id="birthdate"
+        onchange="validateBirthdate()"
+      />
+      <p id="birthdate_err"></p>
+      <br />
+
+      <label for="">Educational Qualification: </label>
+      <select
+        name="qualification"
+        id="qualification"
+        onchange="validateQualification()"
+      >
+        <option value="">Select</option>
+        <option value="PhD">PhD</option>
+        <option value="Masters">Masters</option>
+        <option value="Degree">Degree</option>
+        <option value="Diploma">Diploma</option>
+      </select>
+      <p id="qualification_err"></p>
+      <br />
+
+      <label for="">Password: </label>
+      <input
+        type="password"
+        name="password"
+        id="password"
+        onkeyup="validatePassword()"
+      />
+      <p id="password_err"></p>
+      <br />
+      <label for="">Confirm Password: </label>
+      <input
+        type="password"
+        name="confirmPassword"
+        id="confirmPassword"
+        onkeyup="validateConfirmPassword()"
+      />
+      <p id="confirmPassword_err"></p>
+      <br />
+
+      <label for="">Photo: </label>
+      <input
+        type="file"
+        name="photo"
+        id="photo"
+        onchange="validatePhoto()"
+        accept="image/png, image/jpeg"
+      />
+      <p id="photo_err"></p>
+      <br />
+
+      <input type="submit" value="Submit" />
+    </form>
+
+    <script src="main.js"></script>
+  </body>
+</html>
